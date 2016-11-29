@@ -8,30 +8,30 @@
          http://java.sun.com/xml/ns/j2ee
          http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
-    <display-name>EBI - Linked Data Explorer</display-name>
+    <display-name>EBI Ensembl RDF</display-name>
 
 
     <description>
-        SPARQL endpoint and Linked Data Browser
+        Ensembl RDF Server
     </description>
     <!--Define configuration to load-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            WEB-INF/ebi-lode-service.xml
+            WEB-INF/ensembl-rdf-service.xml
         </param-value>
     </context-param>
 
     <!--Define Servlets -->
     <servlet>
-        <servlet-name>lode</servlet-name>
+        <servlet-name>ensembl-rdf</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <!--Define servlet mappings -->
     <servlet-mapping>
-        <servlet-name>lode</servlet-name>
+        <servlet-name>ensembl-rdf</servlet-name>
         <url-pattern>/servlet/*</url-pattern>
     </servlet-mapping>
 
