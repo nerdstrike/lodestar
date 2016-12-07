@@ -63,7 +63,7 @@ var exampleQueries = [
                 "  ?location faldo:end\n" +
                 "       [a faldo:ForwardStrandPosition ;\n" +
                 "        faldo:position ?end] .\n" +
-                "  ?location faldo:reference <http://rdf.ebi.ac.uk/resource/ensembl/86/mus_musculus/GRCm38/11> .  \n" +
+                "  ?location faldo:reference <http://rdf.ebi.ac.uk/resource/ensembl/87/mus_musculus/GRCm38/11> .  \n" +
                 "  ?gene a ?type ;\n" +
                 "        rdfs:label ?label ;\n" +
                 "        dc:description ?desc ;\n" +
@@ -141,7 +141,7 @@ var exampleQueries = [
                    "?region faldo:end ?end .\n" +
                    "?end faldo:position ?end_value .\n" +
                    "?region faldo:reference ?seqregion .\n" +
-                   "VALUES ?seqregion { <http://rdf.ebi.ac.uk/resource/ensembl/86/homo_sapiens/GRCh38/20> }\n" +
+                   "VALUES ?seqregion { <http://rdf.ebi.ac.uk/resource/ensembl/87/homo_sapiens/GRCh38/20> }\n" +
                    "FILTER ( ?strand = faldo:ForwardStrandPosition OR ?strand = faldo:ReverseStrandPosition )\n" +
                 "}\n" +
                 "LIMIT 200"
@@ -157,7 +157,7 @@ var exampleQueries = [
                 "   ?property rdfs:subPropertyOf* skos:related .\n" +
                 "   ?dbref rdfs:label ?name .\n" +
                 "   FILTER ( ?type = enst:protein_coding )\n" +
-                "   VALUES ?place { <http://rdf.ebi.ac.uk/resource/ensembl/86/homo_sapiens/GRCh38/20> }\n" +
+                "   VALUES ?place { <http://rdf.ebi.ac.uk/resource/ensembl/87/homo_sapiens/GRCh38/20> }\n" +
                 "}"
     },
     {
@@ -177,7 +177,7 @@ var exampleQueries = [
         shortname : "Federated query 2",
         description : "Use DisGeNet to acquire text-mined disease associations for Ensembl genes and associated external names",
         query : "SELECT DISTINCT ?ensemblg ?disease ?diseasename WHERE {\n" +
-                "  GRAPH <http://rdf.ebi.ac.uk/dataset/ensembl/86/homo_sapiens> {\n" +
+                "  GRAPH <http://rdf.ebi.ac.uk/dataset/ensembl/87/homo_sapiens> {\n" +
                 "  ?ensemblg ensemblterms:DEPENDENT ?gene ;\n" +
                 "            obo:RO_0002162 <http://identifiers.org/taxonomy/9606> .\n" +
                 "  FILTER regex(?ensemblg, 'ensg', 'i')\n" +
